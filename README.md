@@ -15,7 +15,10 @@ Este repositório contém o desenvolvimento completo de um subsistema de manipul
 
 ## 🛠️ Especificações do Sistema Eletrônico (Tinkercad)
 
-O circuito foi projetado para otimizar a distribuição de energia de uma fonte externa e utilizar uma lógica visual direta de estados, garantindo a estabilidade operacional dos atuadores e do microcontrolador.
+O circuito foi projetado com foco na otimização da distribuição de energia e isolamento de ruídos eletromecânicos, utilizando uma lógica visual direta de estados para garantir a estabilidade operacional dos atuadores e do microcontrolador.
+
+* **🔗 Link do Circuito Interativo:** [Acessar Simulação no Tinkercad](https://www.tinkercad.com/things/dq9RAbtXQdZ/editel?returnTo=%2Fdashboard)
+* **⚡ Tensão de Operação do Circuito:** **5V (Corrente Contínua)**, alimentado de forma estabilizada e unificada entre os barramentos para suprir simultaneamente o microcontrolador Arduino e a demanda de corrente dos servomotores sob carga.
 
 ### 📋 Mapeamento de Pinos e Conexões
 * **Pino Digital 6:** Saída Digital - LED Vermelho (Status: Mecanismo Fechado / Carga Presa)
@@ -34,7 +37,7 @@ O firmware processa comandos via terminal serial (configurado a 9600 bps) para m
 
 ## 📐 Engenharia Mecânica e Modelagem 3D (OpenSCAD)
 
-A garra foi projetada deixando de ser um protótipo conceitual estático para se tornar um componente mecânico móvel e manufaturável, pronto para Impressão 3D real (FDM).
+Toda a estrutura e os componentes móveis da garra foram desenvolvidos utilizando o software **OpenSCAD**, aplicando modelagem geométrica puramente paramétrica por código. Isso permitiu que o projeto deixasse de ser um protótipo conceitual estático para se tornar um componente mecânico móvel, preciso e pronto para Impressão 3D real (FDM).
 
 ### ⚙️ Características Mecânicas Implementadas
 * **Mecanismo de Inversão por Engrenagem:** Otimização estrutural para operar com apenas **1 servomotor ativo** na ponta do braço. O dente esquerdo transmite o torque diretamente para o dente direito através de uma coroa dentada síncrona de **18 dentes**, garantindo simetria absoluta de movimento e eliminando folgas mecânicas (*backlash*). A distância teórica calculada entre os eixos de fixação no chassi para o acoplamento perfeito é de **22.6 mm**.
